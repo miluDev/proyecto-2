@@ -1,0 +1,44 @@
+:root {
+	color-scheme: light dark;
+
+  --bg-principal: #ccc
+  --color-principal: #111
+
+  --bg-principal-dark: #111
+  --color-principal-dark: #ccc
+}
+
+html {
+  box-sizing: border-box;
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+
+  body {
+    background-color: light-dark(var(-bg-principal), var(-bg-principal-dark));
+    color: light-dark(var(-color-principal), var(-color-principal-dark));
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    h1,
+    p,
+    section h2,
+    section p,
+    article h3 {
+      padding:  0 2rem;
+    }
+  }
+}
